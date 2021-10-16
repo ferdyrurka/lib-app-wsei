@@ -14,5 +14,11 @@ namespace lib_app_wsei.Controllers
             Book firstBook = new Book() { Name = "English dictionary"};
             return View(firstBook);
         }
+        
+        
+        public IActionResult Edit(int id)
+        {
+            return Content("Book" + id);
+        }
     }
 }
