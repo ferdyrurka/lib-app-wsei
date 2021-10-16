@@ -20,7 +20,8 @@ namespace lib_app_wsei.Controllers
         {
             return Content("BookId=" + bookId);
         }
-        
+
+        [Route("books/released/{year:regex(^\\d{{4}}$)}/{month:range(1, 12)}")]
         public IActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + " / " + month);
