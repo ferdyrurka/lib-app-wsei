@@ -64,6 +64,10 @@ namespace lib_app_wsei
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "BooksByReleaseDate",
+                    pattern: "books/released/{year}/{month}",
+                    defaults: new { controller = "Books", action = "ByreleaseDate" });
                 endpoints.MapRazorPages();
             });
         }
